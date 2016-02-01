@@ -130,11 +130,19 @@ angular.module('topProgrammingBlogsApp')
       });
   
     $stateProvider
-      .state('law-firms', {  // Farming page
+      .state('law-firms', {  // Law firm page
         url: '/law-firms',
         templateUrl: 'app/law-firms.html',
         controller: 'MainCtrl',
         title: 'Top Law Firm Blogs - Ranked Blogs'
+      });
+  
+    $stateProvider
+      .state('dad', {  // Dad page
+        url: '/dad',
+        templateUrl: 'app/dad.html',
+        controller: 'MainCtrl',
+        title: 'Top Dad Blogs - Ranked Blogs'
       });
   
   });

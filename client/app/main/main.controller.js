@@ -295,7 +295,7 @@ angular.module('topProgrammingBlogsApp')
     var ref = new Firebase("https://top-programming.firebaseio.com/"); // Instantiate the Firebase service with the new operator.
 
     /* Add more Firebase arrays */
-    var ref3 = new Firebase("https://coding-bootcamps.firebaseio.com/");
+    var ref3 = new Firebase("https://top-programming.firebaseio.com/dad");
     var ref4 = new Firebase("https://top-programming.firebaseio.com/personal-development");
     var ref5 = new Firebase("https://top-programming.firebaseio.com/online-marketing");
     var ref6 = new Firebase("https://parenting.firebaseio.com/");
@@ -352,6 +352,7 @@ angular.module('topProgrammingBlogsApp')
       });
 
     
+    $scope.dad = $firebaseArray(ref3);
     $scope.personalDev = $firebaseArray(ref4);
     $scope.onlineMarketing = $firebaseArray(ref5);
     $scope.parenting = $firebaseArray(ref6);
@@ -411,6 +412,9 @@ angular.module('topProgrammingBlogsApp')
       }
       else if($state.current.name === "law-firms"){
         wildCard = $scope.lawFirms;
+      }
+      else if($state.current.name === "dad"){
+        wildCard = $scope.dad;
       }
     };
     $scope.currentBlogArray();
