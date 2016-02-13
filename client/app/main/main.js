@@ -145,4 +145,12 @@ angular.module('topProgrammingBlogsApp')
         title: 'Top Dad Blogs - Ranked Blogs'
       });
   
+    $stateProvider
+      .state('travel', {  // Travel page
+        url: '/travel',
+        templateUrl: 'app/travel.html',
+        controller: 'MainCtrl',
+        title: 'Top Travel Blogs - Ranked Blogs'
+      });
+  
   });

@@ -309,6 +309,8 @@ angular.module('topProgrammingBlogsApp')
     var ref14 = new Firebase("https://top-programming.firebaseio.com/apple");
     var ref15 = new Firebase("https://top-programming.firebaseio.com/farming");
     var ref16 = new Firebase("https://top-programming.firebaseio.com/law-firms");
+    var ref17 = new Firebase("https://top-programming.firebaseio.com/travel");
+    
     
   
   
@@ -343,6 +345,8 @@ angular.module('topProgrammingBlogsApp')
   
     $scope.data16 = $firebaseObject(ref16);
   
+    $scope.data17 = $firebaseObject(ref17);
+  
     // create a synchronized array
     $scope.blogs = $firebaseArray(ref);
     $scope.blogs.$loaded()
@@ -366,6 +370,8 @@ angular.module('topProgrammingBlogsApp')
     $scope.apple = $firebaseArray(ref14);
     $scope.farming = $firebaseArray(ref15);
     $scope.lawFirms = $firebaseArray(ref16);
+    $scope.travel = $firebaseArray(ref17);
+    
   
     var wildCard = $scope.personalDev; // Replace with current blog list that is being updated
   
@@ -416,6 +422,9 @@ angular.module('topProgrammingBlogsApp')
       else if($state.current.name === "dad"){
         wildCard = $scope.dad;
       }
+      else if($state.current.name === "travel"){
+        wildCard = $scope.travel;
+      }
     };
     $scope.currentBlogArray();
     
@@ -449,9 +458,10 @@ angular.module('topProgrammingBlogsApp')
     });
    
     
-    // Set Title Tag
+    // Set Title Tag for SEO
     $scope.currentTitleTag = $state.current.title;
     $window.document.title = $state.current.title;
+  
   
     // Google Feed API
   
