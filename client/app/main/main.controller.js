@@ -396,7 +396,7 @@ angular.module('topProgrammingBlogsApp')
         wildCard = $scope.programming;
       }
       else if($state.current.name === "main"){
-        wildCard = $scope.programming;
+        wildCard = $scope.codeSchools;
       }
       else if($state.current.name === "marketing"){
         wildCard = $scope.marketing;

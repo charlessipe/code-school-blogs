@@ -10,14 +10,15 @@
     <!--<a href="">Log In To Vote</a><br> 
     <a href="">Log Out</a> -->
     <p>Hello {{ userName }}.</p>
-      
-    <h2 class="headline">Ranked Blogs ranks the top blogs according to votes by the community and web metrics.</h2>
+    <!--  
+    <h2 class="headline">Top Code School Blogs ranks the top blogs according to votes by the community and web metrics.</h2> 
     <div class="row homepage-row">
       <div class="col-md-4"><div class="homepage-icon"><span class="glyphicon glyphicon-thumbs-up"></span></div><h2>Vote on the top blogs.</h2></div>
       <div class="col-md-4"><div class="homepage-icon"><span class="glyphicon glyphicon-circle-arrow-up"></span></div><h2>View the top blogs in your favorite subjects.</h2></div>
       <div class="col-md-4"><div class="homepage-icon"><span class="glyphicon glyphicon-list-alt"></span></div><h2>See the latest article for each blog.</h2></div>
     </div>
-      
+    -->
+    <!--  
     <div class="row subjects">
       <div class="col-xs-12">
       <h1>Subjects</h1>
@@ -46,9 +47,9 @@
       <li><span class="glyphicon glyphicon-circle-arrow-up"></span> <a ui-sref='travel'>Travel</a></li>
       </div>
     </div>
-    
-    <h1>Top Programming Blogs</h1>
-    <p>Top Programming Blogs ranks the top blogs in the programming field based on the votes by the community and website metrics.</p> 
+    -->
+    <h1>Top Code School Blogs</h1>
+    <p>Top Code School Blogs ranks the top blogs in the programming field based on the votes by the community and website metrics.</p> 
     <p>Tip: Click on the <span class="glyphicon glyphicon-thumbs-up"></span> to vote for a blog.</p>  
     </div>
   </div>
@@ -70,7 +71,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="blog in programming | orderBy: sortBy | filter:filters">
+      <tr ng-repeat="blog in codeSchools | orderBy: sortBy | filter:filters">
         <td>{{$index+1}}</td>
         <td class="text-left"><a href="{{ blog.mainUrl }}">{{ blog.name }}</a></td>
         <td><span class="glyphicon glyphicon-thumbs-up hover-blue" data-ng-click="addVoteWild(blog)"></span> {{ blog.votes.length }}</td>
